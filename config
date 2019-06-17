@@ -18,13 +18,14 @@ AddToFunc   StartFunction
 # Only execute once
 DestroyFunc InitFunction
 AddToFunc InitFunction
-+ I Exec exec compton -b
++ I Exec exec compton -bc
 + I Exec exec xsettingsd &
 + I Exec exec xbacklight -set 80
 + I Exec exec xset +fp ~/.fonts/misc/
 + I Exec exec xrdb ~/.Xresources
 + I Exec exec fcitx &
 + I Exec exec dunst &
++ I Exec exec mpd &
 
 ## To Create a Thumbnail on Minimize
 # Call the script to create a thumbnail using ImageMagick & xwd
@@ -111,6 +112,9 @@ Key g A 4S Exec geany
 Key XF86AudioRaiseVolume A A Exec amixer -q set Master 5%+ 
 Key XF86AudioLowerVolume A A Exec amixer -q set Master 5%- 
 Key XF86AudioMute A A Exec amixer set Master toggle
+# backlight control
+Key XF86MonBrightnessUp A A Exec xbacklight -inc 10
+Key XF86MonBrightnessDown A A Exec xbacklight -dec 10
 # Music control
 Key XF86AudioNext A A Exec mpc next
 Key XF86AudioPrev A A Exec mpc prev

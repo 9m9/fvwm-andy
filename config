@@ -310,7 +310,7 @@ AddToMenu MenuSendTo
 # Default
 Colorset 0 fg #d8dee8, bg #7a7a7a, hi, sh, Plain, NoShape
 # Inactive windows
-Colorset 1 fg #f4ebd4, bg #f4ebd4, hi, sh, Plain, NoShape
+Colorset 1 fg #042C83, bg #042C83, hi, sh, Plain, NoShape
 # Active windows
 Colorset 2 fg #042C83, bg #042C83, hi, sh, Plain, NoShape
 # Colorset 2 fg #f4ebd4, bg #f4ebd4, hi, sh, Plain, NoShape

@@ -1,0 +1,100 @@
+Style danmaku !Title,Sticky,StaysOnTop,Placement Left Top
+Style danmaku !Title,Sticky,StaysOnTop,Placement Left Top,
+Style danmaku !Title,Sticky,StaysOnTop,Placement
+Style danmaku !Title,Sticky,StaysOnTop,PositionPlacement
+Style danmaku !Title,Sticky,StaysOnTop,PositionPlacement 50 50
+Style danmaku !Title,Sticky,StaysOnTop,PositionPlacement w+5 50
+Style danmaku !Title,PositionPlacement w+5 50
+Close
+Close
+Close
+Iconize
+iconify
+DeThumbnail
+Thumbnail
+AddToFunc my-Top
++ C Silent Style StaysOnTop
+my-Top
+my-Top
+FvwmIdent
+FvwmIdent
+Style URxvt* TitleTop
+Style URxvt* TitleAtTop
+Style URxvt* TitleAtLeft
+Mouse 3 A MC MenuWindowOpsLong
+Mouse 3 A MC Menu MenuWindowOpsLong
+MenuStyle * Font "xft:Noto Sans:size=14"
+Style Navigator NeverFocus
+Style Iconified NeverFocus
+Style Navigator SloppyFocus
+Style Iconified NeverFocus
+*FvwmAnimate: Delay 25
+*FvwmAnimate: Delay 59
+*FvwmAnimate: Delay 50
+*FvwmAnimate: Delay 100
+*FvwmAnimate: Delay 300
+*FvwmAnimate: Effect Random
+*FvwmAnimate: Width 3
+*FvwmAnimate: Effect Zoon3D
+*FvwmAnimate: Delay 3000
+*FvwmAnimate: Effect Flip
+*FvwmAnimate: Color LightBlue
+*FvwmAnimate: Iterations 30
+SendToModule FvwmAnimate animate 100 100 100 100 500 500 100 100
+SendToModule FvwmAnimate Flip 100 100 100 100 500 500 100 100
+SendToModule FvwmAnimate play 100 100 100 100 500 500 100 100
+SendToModule FvwmAnimate animate 100 100 100 100 500 500 100 100
+SendToModule FvwmAnimate play
+All (URxvt) Iconfiy on
+Module FvwmAnimate 
+*FvwmAnimate: Delay 30
+*FvwmAnimate: Iterations 5
+*FvwmAnimate: Effect Zoom3d
+*FvwmAnimate: Width 5
+Module FvwmAnimate 
+*FvwmAnimate: Iterations 50
+*FvwmAnimate: Delay 80
+*FvwmAnimate: Delay 50
+*FvwmAnimate: Delay 30
+*FvwmAnimate: Delay 20
+*FvwmAnimate: Delay 10
+*FvwmAnimate: Effect Random
+*FvwmAnimate: Iterations 100
+*FvwmAnimate: Delay 5
+*FvwmAnimate: Iterations 200
+*FvwmAnimate: Delay 20
+*FvwmAnimate: Delay 10
+*FvwmAnimate: Effect Frame
+*FvwmAnimate: Save
+*FvwmAnimate: Delay 5
+*FvwmAnimate: Save
+*FvwmAnimate: Delay 2
+*FvwmAnimate: Delay 1
+*FvwmAnimate: Delay 2
+*FvwmAnimate: Save
+OpaqueMoveSize 5
+OpaqueMoveSize -1
+Style * ResizeOpaque
+*FvwmAnimate: Color LightBlue
+*FvwmAnimate: Twist 1
+*FvwmAnimate: Twist 10
+*FvwmAnimate: Twist 100
+*FvwmAnimate: Effect twist
+Module FvwmAnimate
+*FvwmAnimate: Width 5
+Module FvwmAnimate
+KillModule FvwmAnimate
+KillModule FvwmAnimate
+KillModule FvwmAnimate
+KillModule FvwmAnimate
+Module FvwmAnimate
+Module FvwmAnimate
+*FvwmAnimate: Effect Frame
+*FvwmAnimate: Effect Flip
+*FvwmAnimate: Effect Frame
+*FvwmAnimate: Effect Turn
+Style * ResizeOpaque
+Style * ResizeOutLine
+Mouse 2 R A WindowList CurrentAtEnd
+MenuStyle WindowList CurrentAtEnd
+WindowList CurrentAtEnd

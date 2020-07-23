@@ -14,7 +14,7 @@ SetEnv icons $[HOME]/.fvwm/icons
 # Start or restart
 DestroyFunc StartFunction
 AddToFunc   StartFunction
-+ I Test Exec exec hsetroot -blur 10 -full ~/.fvwm/images/wallpaper.png
++ I Test Exec exec hsetroot -blur 10 -full ~/.fvwm/images/wallpaper.jpg
 # Only execute once
 DestroyFunc InitFunction
 AddToFunc InitFunction
@@ -26,6 +26,7 @@ AddToFunc InitFunction
 + I Exec exec fcitx &
 + I Exec exec dunst &
 + I Exec exec mpd &
++ I Module FvwmAnimate
 
 ## To Create a Thumbnail on Minimize
 # Call the script to create a thumbnail using ImageMagick & xwd
@@ -95,6 +96,7 @@ AddToFunc RaiseMove
 ## KEYBINDS
 
 # Key <key> <location> <modifier> <actions>
+# Key <key_name> <context> <modifier> <command>
 ## Common Keybinds
 # Ignore Numlock and other modifiers for bindings
 IgnoreModifiers L25
@@ -196,7 +198,7 @@ Mouse 3 T A Menu MenuWindowOps
 
 ## Rootmenu on The Desktop
 Mouse 1 R A Menu MenuFvwmRoot
-Mouse 2 R A WindowList
+Mouse 2 R A WindowList CurrentAtEnd
 Mouse 3 R A Menu MenuWindowOpsLong
 
 ## On minimized windows
@@ -211,7 +213,7 @@ MenuStyle * MenuColorset 5, ActiveColorset 6, GreyedColorset 7, TitleColorset 8
 MenuStyle * Hilight3DOff, HilightBack, HilightTitleBack, SeparatorsLong
 MenuStyle * TrianglesSolid, TrianglesUseFore
 MenuStyle * ItemFormat "%|%4.2i%5.3l%5.3>%|"
-MenuStyle * Font "xft:Noto Sans:size=8"
+MenuStyle * Font "xft:Noto Sans:size=14"
 
 ## Root Menu on The Desktop
 DestroyMenu MenuFvwmRoot
@@ -310,7 +312,9 @@ Colorset 0 fg #d8dee8, bg #7a7a7a, hi, sh, Plain, NoShape
 # Inactive windows
 Colorset 1 fg #f4ebd4, bg #f4ebd4, hi, sh, Plain, NoShape
 # Active windows
-Colorset 2 fg #f4ebd4, bg #f4ebd4, hi, sh, Plain, NoShape
+Colorset 2 fg #042C83, bg #042C83, hi, sh, Plain, NoShape
+# Colorset 2 fg #f4ebd4, bg #f4ebd4, hi, sh, Plain, NoShape
+
 # Inactive windows borders
 Colorset 3 fg #f4ebd4, bg #f4ebd4, hi #f4ebd4, sh #f4ebd4, Plain, NoShape
 # Active windows borders
@@ -439,3 +443,34 @@ Style FvwmPager !Title, !Borders, StaysOnBottom, Sticky
 ## Minimize to Thumbnail Placeholder
 Style * IconBox 400x600-20+48, IconGrid 1 4, \
 IconFill top right, !IconTitle, IconBackgroundRelief 0
+
+# 自定义配置
+# 自动加载 FvwmConsole
+# Module FvwmConsole -terminal urxvt
+Key F12		A	MS	FvwmConsole -terminal urxvt
+
+# danmaku 去掉标题栏
+# Style danmaku !Title,Sticky,StaysOnTop,PositionPlacement -0 -0
+
+# 激活 window ops
+# Mouse/Key	key_name	context	modifier	command
+Mouse 3 A MC Menu MenuWindowOpsLong
+
+# Thumbnail 永远不获取 focus
+# TODO:
+# Style Navigator NeverFocus
+
+# https://github.com/ThomasFunk/Fvwm-Default-Config/blob/master/.default.fvwm2rc
+#=======================================================================
+# 7.1 FvwmAnimate
+#=======================================================================
+DestroyModuleConfig FvwmAnimate: *
+
+*FvwmAnimate: Color #6e6e6e
+*FvwmAnimate: Effect Turn
+*FvwmAnimate: Delay 3
+*FvwmAnimate: Iterations 50
+*FvwmAnimate: Width 5
+
+# Key Tab A M	WindowList Root c c CurrentAtEnd, IconifiedAtEnd, NoGeometry, NoDeskSort, SelectOnRelease Alt_L my_dbltab_prev
+# Key Tab	A CM	WindowList Root c c CurrentAtEnd, IconifiedAtEnd, NoGeometry, OnlyListSkip, SelectOnRelease
